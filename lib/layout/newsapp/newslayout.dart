@@ -5,6 +5,8 @@ import 'cubit/cubits.dart';
 import 'cubit/states.dart';
 
 class NewsLayout extends StatelessWidget {
+  const NewsLayout({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -17,13 +19,25 @@ class NewsLayout extends StatelessWidget {
 
           return Scaffold(
             appBar: AppBar(
-              title: Text(
+              title: const Text(
                 'News App',
               ),
               actions: [
                 IconButton(
-                  icon: Icon(Icons.search),
+                  icon: const Icon(
+                    Icons.search,
+                  ),
                   onPressed: () {},
+                ),
+                IconButton(
+                  icon: const Icon(
+                    Icons.brightness_4_outlined,
+                  ),
+                  onPressed: ()
+                  {
+                    print("Bisho ${NewsCubit.get(context).isDark}");
+                    NewsCubit.get(context).changeAppMode();
+                  },
                 ),
               ],
             ),

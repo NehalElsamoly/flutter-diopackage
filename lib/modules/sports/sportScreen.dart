@@ -23,7 +23,7 @@ class SportScreen extends StatelessWidget {
             condition:list.isNotEmpty,
             builder: (context)=>ListView.separated(
               physics: const BouncingScrollPhysics(),
-              itemBuilder:(context,index)=>buildArticleItem(list[index])
+              itemBuilder:(context,index)=>buildArticleItem(list[index],context)
               , separatorBuilder: ( context,  index)=>myDivider()
               ,itemCount: list.length, ),
             fallback: (context)=>const Center(child:CircularProgressIndicator()),

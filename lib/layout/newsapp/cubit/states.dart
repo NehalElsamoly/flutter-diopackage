@@ -17,6 +17,7 @@ class NewsGetBusinessErrorState extends NewsStates
 
 class NewsGetSportsLoadingState extends NewsStates {}
 
+
 class NewsGetSportsSuccessState extends NewsStates {}
 
 class NewsGetSportsErrorState extends NewsStates
@@ -36,3 +37,4 @@ class NewsGetScienceErrorState extends NewsStates
 
   NewsGetScienceErrorState(this.error);
 }
+class AppChangeModeState extends NewsStates{}
